@@ -1,6 +1,6 @@
 <?php
 
-namespace ImagesManagement\ImageTrait;
+namespace imagesmanagement\imagetrait;
 
 use Illuminate\Support\Facades\Storage;
 
