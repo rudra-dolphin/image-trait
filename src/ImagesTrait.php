@@ -1,13 +1,13 @@
 <?php
 
-namespace imagesmanagement\imagetrait;
+namespace ImagesManagement\ImageTrait;
 
 use Illuminate\Support\Facades\Storage;
 
 
 trait ImagesTrait
 {
-    // Upload Image Trait Method 
+    // Upload Image Trait Method
     public function uploadMedia($media, $deleteOlder = true, $filenameold, $name, $filepath)
     {
 
@@ -22,7 +22,7 @@ trait ImagesTrait
         return null;
     }
 
-    // Upload Images Trait Method 
+    // Upload Images Trait Method
     public function uploadImages(array $images, $deleteOlder = true, $filenameold, $name, $filepath)
     {
         $uploadedImages = [];
