@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Traits;
+namespace ImagesManagement\ImageTrait;
 
 use Illuminate\Support\Facades\Storage;
+
 
 trait ImagesTrait
 {
