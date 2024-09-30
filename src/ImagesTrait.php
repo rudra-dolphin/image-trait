@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Storage;
 trait ImagesTrait
 {
     // Upload Image Trait Method
-    public function uploadMedia($media, $deleteOlder = true, $filenameold, $name, $filepath)
+    public function uploadMedia($media, $name, $filepath, $filenameold, $deleteOlder = true)
     {
 
         if ($deleteOlder == true) {
@@ -23,7 +23,7 @@ trait ImagesTrait
     }
 
     // Upload Images Trait Method
-    public function uploadImages(array $images, $deleteOlder = true, $filenameold, $name, $filepath)
+    public function uploadImages(array $images, $name, $filepath, $filenameold, $deleteOlder = true)
     {
         $uploadedImages = [];
         $fullFilePath = "public/" . $filepath;
