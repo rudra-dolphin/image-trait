@@ -26,6 +26,7 @@ trait ImagesTrait
     public function uploadImages(array $images, $name, $filepath, $filenameold, $deleteOlder = true): array
     {
         $uploadedImages = [];
+        
         $fullFilePath =  $filepath;
 
         if ($deleteOlder) {
