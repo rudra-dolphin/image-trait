@@ -23,17 +23,17 @@ trait ImagesTrait
     }
 
     // Upload Images Trait Method
-    public function uploadImages(array $images, $name, $filepath, $filenameold, $deleteOlder = true)
+    public function uploadImages(array $images, $name, $filepath, $filenameold, $deleteOlder = true): array
     {
         $uploadedImages = [];
-        $fullFilePath = "public/" . $filepath;
+        $fullFilePath =  $filepath;
 
         if ($deleteOlder) {
             $this->deleteImage($filepath, $filenameold);
         }
         foreach ($images as $file) {
             $fileName = $name . '-' . uniqid() . '.' . $file->getClientOriginalExtension();
-            $file->storeAs($fullFilePath, $fileName);
+            $file->storeAs($fullFilePath, $fileName, 'public');
             $uploadedImages[] = $fileName;
         }
 
